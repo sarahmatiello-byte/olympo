@@ -16,9 +16,56 @@
             padding: 16px;
         }
         img{
-            width: 80px;
-            height: 80px;
+            width: 500px;
+            height: auto;
         }
         h1 {
             color:rgb(238, 224, 215);
         }
+body {
+    background-color: #e8d3b5; /* cor de areia */
+    color: #234b5a; /* azul escuro */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid #8fbfd1; /* azul claro */
+}
+
+main {
+    background-color: #d9edf2; /* azul bem clarinho */
+    color: #234b5a;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+h1 {
+    color: #2f7187; /* azul */
+}
+
+h2 {
+    color: #527f8c;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #c9a979; /* areia mais escura */
+}
+
+a {
+    color: #2f7187;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #163f4d;
+}
