@@ -69,3 +69,86 @@ a {
 a:hover {
     color: #163f4d;
 }
+
+/* LINHA DO TEMPO */
+
+.linha-do-tempo {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Linha central */
+.linha-do-tempo::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #c9a66b;
+    transform: translateX(-50%);
+}
+
+/* Cada período */
+.periodo {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+/* Alterna os lados */
+.periodo:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.periodo:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Bolinha na linha */
+.periodo::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border: 4px solid #c9a66b;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.periodo:nth-child(odd)::after {
+    right: -11px;
+}
+
+.periodo:nth-child(even)::after {
+    left: -11px;
+}
+
+/* Cartões */
+.conteudo {
+    background: #f5ead7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.conteudo h3 {
+    margin-top: 0;
+    color: #6b4f32;
+}
+
+.conteudo span {
+    font-weight: bold;
+    color: #a4773f;
+}
+
+.conteudo p {
+    line-height: 1.6;
+}
