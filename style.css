@@ -1,190 +1,38 @@
-  body {
-            background-color: rgb(231, 201, 175);
-            color: rgb(4, 56, 75);
-            font-family: Arial, sans-serif;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-            border: 5px solid #000000;
-        }
-        main {
-            background-color: rgb(238, 224, 215);
-            color: rgb(144, 182, 209);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-        }
-        img{
-            width: 500px;
-            height: auto;
-        }
-        h1 {
-            color:rgb(238, 224, 215);
-        }
-body {
-    background-color: #e8d3b5; /* cor de areia */
-    color: #234b5a; /* azul escuro */
-    font-family: Arial, sans-serif;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 5px solid #8fbfd1; /* azul claro */
-}
-
-main {
-    background-color: #d9edf2; /* azul bem clarinho */
-    color: #234b5a;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 25px;
-}
-
-h1 {
-    color: #2f7187; /* azul */
-}
-
-h2 {
-    color: #527f8c;
-}
-
-p {
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-img {
-    width: 500px;
-    max-width: 100%;
-    height: auto;
-    border: 4px solid #c9a979; /* areia mais escura */
-}
-
-a {
-    color: #2f7187;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #163f4d;
-}
-
-/* LINHA DO TEMPO */
-
-.linha-do-tempo {
-    position: relative;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-/* Linha central */
-.linha-do-tempo::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: #c9a66b;
-    transform: translateX(-50%);
-}
-
-/* Cada período */
-.periodo {
-    position: relative;
-    width: 50%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-}
-
-/* Alterna os lados */
-.periodo:nth-child(odd) {
-    left: 0;
-    text-align: right;
-}
-
-.periodo:nth-child(even) {
-    left: 50%;
-    text-align: left;
-}
-
-/* Bolinha na linha */
-.periodo::after {
-    content: "";
-    position: absolute;
-    top: 35px;
-    width: 18px;
-    height: 18px;
-    background: #fff;
-    border: 4px solid #c9a66b;
-    border-radius: 50%;
-    z-index: 2;
-}
-
-.periodo:nth-child(odd)::after {
-    right: -11px;
-}
-
-.periodo:nth-child(even)::after {
-    left: -11px;
-}
-
-/* Cartões */
-.conteudo {
-    background: #f5ead7;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.conteudo h3 {
-    margin-top: 0;
-    color: #6b4f32;
-}
-
-.conteudo span {
-    font-weight: bold;
-    color: #a4773f;
-}
-
-.conteudo p {
-    line-height: 1.6;
-}
-/* Tema escuro */
-body.tema-escuro {
-    background-color: #222;
-    color: white;
-}
-
-body.tema-escuro header {
-    background-color: #111;
-}
-
-body.tema-escuro a {
-    color: #87ceeb;
-}
+  /* ========================================
+   CONFIGURAÇÃO GERAL
+======================================== */
 
 body {
     margin: 0;
     padding: 30px;
-    background: #f3ead7;
-    color: #26354a;
+
+    background-color: #102a43;
+    color: #f1ead8;
+
     font-family: 'Lora', serif;
-    transition: 0.4s;
+    text-align: center;
+
+    transition: background-color 0.4s, color 0.4s;
 }
 
-h1, h2, h3 {
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+h1,
+h2,
+h3 {
     font-family: 'Cinzel', serif;
-    color: #17324d;
 }
 
 h1 {
+    color: #f0d58c;
     font-size: 42px;
 }
 
 h2 {
+    color: #a9d6e5;
     font-size: 30px;
 }
 
@@ -193,74 +41,189 @@ p {
     line-height: 1.7;
 }
 
-/* ===== LINKS DOS POSTS ===== */
 
-.links-posts {
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+
+    padding: 30px;
+
+    background-color: #173b5e;
+
+    border: 3px solid #d4af61;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+main {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background-color: #1d4668;
+
+    border-radius: 18px;
+
+    border: 2px solid #d4af61;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   CARTÕES DOS POSTS
+======================================== */
+
+.post {
     margin-top: 25px;
-}
 
-.linha-posts {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
+    padding: 22px;
 
-.links-posts a {
-    color: #8b6b28;
-    font-weight: bold;
-    font-size: 17px;
+    background-color: #214f73;
+
+    border: 2px solid #d4af61;
+
+    border-radius: 15px;
+
     transition: 0.3s;
 }
 
-.links-posts a:hover {
-    color: #b08a35;
+
+/* Efeito quando passa o mouse */
+
+.post:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.3);
 }
+
+
+/* ========================================
+   POST 2 E POST 3
+   FICAM LADO A LADO
+======================================== */
+
+.linha-posts {
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+
+.linha-posts .post {
+    flex: 1;
+
+    margin-top: 0;
+}
+
+
+/* ========================================
+   POST 4
+   FICA NA LINHA DE BAIXO
+======================================== */
 
 .post4 {
     margin-top: 20px;
 }
 
-/* ===== BOTÃO MODO ESCURO ===== */
 
-#temaBtn {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
+/* ========================================
+   LINKS
+======================================== */
 
-    width: 50px;
-    height: 50px;
+a {
+    color: #f0d58c;
 
-    border: none;
-    border-radius: 50%;
+    text-decoration: none;
 
-    background: #17324d;
-    color: white;
+    font-weight: bold;
 
-    font-size: 22px;
-    cursor: pointer;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-
-    z-index: 1000;
+    font-size: 17px;
 
     transition: 0.3s;
 }
+
+
+a:hover {
+    color: #ffffff;
+
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   BOTÃO DO MODO ESCURO
+======================================== */
+
+#temaBtn {
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: 2px solid #d4af61;
+
+    border-radius: 50%;
+
+    background-color: #0b1f33;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    z-index: 3000;
+
+    transition: 0.3s;
+}
+
 
 #temaBtn:hover {
     transform: scale(1.1);
 }
 
-/* ===== ABERTURA COM TRIDENTE ===== */
+
+/* ========================================
+   TELA DE ABERTURA
+======================================== */
 
 #abertura {
     position: fixed;
+
     inset: 0;
 
-    background: #17324d;
+    background-color: #0b1f33;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
 
     z-index: 2000;
@@ -268,66 +231,146 @@ p {
     animation: desaparecer 1s ease 2s forwards;
 }
 
+
+/* TRIDENTE */
+
 .simbolo-tritao {
     font-size: 90px;
+
     animation: aparecer 1.5s ease;
 }
 
+
 #abertura h2 {
-    color: #e7c76a;
+    color: #f0d58c;
+
     margin-top: 15px;
 }
 
+
+/* ========================================
+   ANIMAÇÃO DO TRIDENTE
+======================================== */
+
 @keyframes aparecer {
+
     from {
         opacity: 0;
+
         transform: scale(0.5);
     }
 
     to {
         opacity: 1;
+
         transform: scale(1);
     }
+
 }
+
+
+/* ========================================
+   ANIMAÇÃO DA ABERTURA
+======================================== */
 
 @keyframes desaparecer {
+
     to {
         opacity: 0;
+
         visibility: hidden;
     }
+
 }
 
-/* ===== MODO ESCURO ===== */
+
+/* ========================================
+   MODO ESCURO
+======================================== */
 
 body.tema-escuro {
-    background: #101923;
+
+    background-color: #050b12;
+
     color: #e7e0cf;
 }
+
+
+body.tema-escuro header {
+
+    background-color: #0c1824;
+
+    border-color: #c9a85b;
+}
+
+
+body.tema-escuro main {
+
+    background-color: #101f2d;
+
+    border-color: #c9a85b;
+}
+
 
 body.tema-escuro h1,
 body.tema-escuro h2,
 body.tema-escuro h3 {
-    color: #e7c76a;
+
+    color: #f0d58c;
 }
+
+
+body.tema-escuro p {
+
+    color: #e7e0cf;
+}
+
+
+body.tema-escuro .post {
+
+    background-color: #14283a;
+
+    border-color: #c9a85b;
+}
+
 
 body.tema-escuro a {
-    color: #e7c76a;
+
+    color: #f0d58c;
 }
+
 
 body.tema-escuro #temaBtn {
-    background: #e7c76a;
-    color: #101923;
+
+    background-color: #f0d58c;
+
+    color: #0b1f33;
 }
-const temaBtn = document.getElementById("temaBtn");
 
-temaBtn.addEventListener("click", function() {
 
-    document.body.classList.toggle("tema-escuro");
+/* ========================================
+   CELULAR
+======================================== */
 
-    if (document.body.classList.contains("tema-escuro")) {
-        temaBtn.textContent = "☀️";
-    } else {
-        temaBtn.textContent = "🌙";
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
     }
 
-});
+
+    h1 {
+        font-size: 32px;
+    }
+
+
+    h2 {
+        font-size: 24px;
+    }
+
+
+    .linha-posts {
+        flex-direction: column;
+    }
+
+}
