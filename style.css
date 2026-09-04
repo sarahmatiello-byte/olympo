@@ -165,3 +165,156 @@ body.tema-escuro header {
 body.tema-escuro a {
     color: #87ceeb;
 }
+
+body {
+    margin: 0;
+    padding: 30px;
+    background: #f3ead7;
+    color: #26354a;
+    font-family: 'Lora', serif;
+    transition: 0.4s;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: #17324d;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ===== LINKS DOS POSTS ===== */
+
+.links-posts {
+    margin-top: 25px;
+}
+
+.linha-posts {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.links-posts a {
+    color: #8b6b28;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.links-posts a:hover {
+    color: #b08a35;
+}
+
+.post4 {
+    margin-top: 20px;
+}
+
+/* ===== BOTÃO MODO ESCURO ===== */
+
+#temaBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #17324d;
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    z-index: 1000;
+
+    transition: 0.3s;
+}
+
+#temaBtn:hover {
+    transform: scale(1.1);
+}
+
+/* ===== ABERTURA COM TRIDENTE ===== */
+
+#abertura {
+    position: fixed;
+    inset: 0;
+
+    background: #17324d;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+
+    animation: desaparecer 1s ease 2s forwards;
+}
+
+.simbolo-tritao {
+    font-size: 90px;
+    animation: aparecer 1.5s ease;
+}
+
+#abertura h2 {
+    color: #e7c76a;
+    margin-top: 15px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes desaparecer {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* ===== MODO ESCURO ===== */
+
+body.tema-escuro {
+    background: #101923;
+    color: #e7e0cf;
+}
+
+body.tema-escuro h1,
+body.tema-escuro h2,
+body.tema-escuro h3 {
+    color: #e7c76a;
+}
+
+body.tema-escuro a {
+    color: #e7c76a;
+}
+
+body.tema-escuro #temaBtn {
+    background: #e7c76a;
+    color: #101923;
+}
