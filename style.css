@@ -152,3 +152,16 @@ a:hover {
 .conteudo p {
     line-height: 1.6;
 }
+/* Tema escuro */
+body.tema-escuro {
+    background-color: #222;
+    color: white;
+}
+
+body.tema-escuro header {
+    background-color: #111;
+}
+
+body.tema-escuro a {
+    color: #87ceeb;
+}
