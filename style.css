@@ -318,3 +318,16 @@ body.tema-escuro #temaBtn {
     background: #e7c76a;
     color: #101923;
 }
+const temaBtn = document.getElementById("temaBtn");
+
+temaBtn.addEventListener("click", function() {
+
+    document.body.classList.toggle("tema-escuro");
+
+    if (document.body.classList.contains("tema-escuro")) {
+        temaBtn.textContent = "☀️";
+    } else {
+        temaBtn.textContent = "🌙";
+    }
+
+});
